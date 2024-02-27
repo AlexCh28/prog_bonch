@@ -4,10 +4,10 @@ int main()
 {
     int num;
 
-    printf("Enter a number: ");
+    printf("Введите любое число: ");
     scanf("%d", &num);
 
-    (num%2==0) ? printf("This number is even") : printf("This number is odd");
+    (num%2==0) ? printf("Это число чётное\n") : printf("Это число нечётное\n");
 
     return 0;
 }

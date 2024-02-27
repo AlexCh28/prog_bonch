@@ -19,10 +19,10 @@ int main()
 {
     int x;
 
-    printf("Enter x: ");
+    printf("Введите x: ");
     scanf("%d", &x);
 
-    printf("f(x) = %d", f(x));
+    printf("f(x) = %d\n", f(x));
 
     return 0;
 }

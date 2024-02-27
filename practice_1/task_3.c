@@ -4,13 +4,13 @@ int main()
 {
     int N, K;
 
-    printf("Enter N: ");
+    printf("Введите N: ");
     scanf("%d", &N);
 
-    printf("Enter K: ");
+    printf("Введите K: ");
     scanf("%d", &K);
 
-    (N%K==0) ? printf("N is divisible by K") : printf("N is NOT divisible by K");
+    (N%K==0) ? printf("N кратно K\n") : printf("N не кратно K\n");
 
     return 0;
 }

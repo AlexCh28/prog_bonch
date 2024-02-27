@@ -4,13 +4,13 @@ int main()
 {
     int a, b, c;
 
-    printf("Enter first number: ");
+    printf("Введите первое число: ");
     scanf("%d", &a);
 
-    printf("Enter second number: ");
+    printf("Введите второе число: ");
     scanf("%d", &b);
 
-    printf("Enter third number: ");
+    printf("Введите третье число: ");
     scanf("%d", &c);
 
     int m = a;
@@ -24,6 +24,6 @@ int main()
         m = c;
     }
 
-    printf("Maximum: %d", m);
+    printf("Наибольшее число: %d\n", m);
     return 0;
 }

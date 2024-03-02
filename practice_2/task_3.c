@@ -9,7 +9,7 @@ void whileCicleOutput();
 void doWhileCicleOutput();
 void forCicleOutput();
 void forGotoCicleOutput();
-void recursionCicleOutput();
+void recursionCicleOutput(int);
 
 int main()
 {

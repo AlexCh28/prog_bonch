@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-int whileCicleOutput();
-int doWhileCicleOutput();
-int forCicleOutput();
-int forGotoCicleOutput();
-int recursionCicleOutput();
+int whileCicleOutput(int);
+int doWhileCicleOutput(int);
+int forCicleOutput(int);
+int forGotoCicleOutput(int);
+int recursionCicleOutput(int);
 
 int main()
 {

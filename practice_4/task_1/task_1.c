@@ -2,7 +2,6 @@
 
 const int INPUT_LENGTH = 100;
 const char INPUT_FILE_NAME[] = "input";
-const char OUTPUT_FILE_NAME[] = "output";
 
 int main()
 {

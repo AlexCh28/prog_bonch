@@ -2,10 +2,10 @@
 
 int main() 
 {
-    float a;
+    double a;
 
     printf("Ввод: ");
-    scanf("%f", &a);
+    scanf("%lf", &a);
 
     if (a < 0) 
     {
@@ -15,15 +15,88 @@ int main()
 
     printf("Вывод: ");
 
-    if ((int)a / 10000 != 0 && (int)a / 1000 == 0)
+    //-------------------------------------------------
+
+    switch((int) a / 100000000)
     {
-        switch((int) a / 10000)
+    case 1: printf("сто "); break;
+    case 2: printf("двести "); break;
+    case 3: printf("триста "); break;
+    case 4: printf("четыреста "); break;
+    case 5: printf("пятьсот "); break;
+    case 6: printf("шестьсот "); break;
+    case 7: printf("семьсот "); break;
+    case 8: printf("восемьсот "); break;
+    case 9: printf("девятьсот "); break;
+    }
+
+    if ((int)a % 100000000 / 10000000 != 0 && (int)a % 10000000 / 1000000 == 0)
+    {
+        switch((int) a % 100000000 / 10000000)
+        {
+        case 1: printf("десять миллионов "); break;
+        case 2: printf("двадцать миллионов "); break;
+        case 3: printf("тридцать миллионов "); break;
+        case 4: printf("сорок миллионов "); break;
+        case 5: printf("пятьдесят миллионов "); break;
+        case 6: printf("шестьдесят миллионов "); break;
+        case 7: printf("семьдесят миллионов "); break;
+        case 8: printf("восемьдесят миллионов "); break;
+        case 9: printf("девяносто миллионов "); break;
+        }
+    }
+    else{
+        switch((int) a % 100000000 / 10000000)
+        {
+        case 1: printf("десять "); break;
+        case 2: printf("двадцать "); break;
+        case 3: printf("тридцать "); break;
+        case 4: printf("сорок "); break;
+        case 5: printf("пятьдесят "); break;
+        case 6: printf("шестьдесят "); break;
+        case 7: printf("семьдесят "); break;
+        case 8: printf("восемьдесят "); break;
+        case 9: printf("девяносто "); break;
+        }
+
+        switch((int) a % 10000000 / 1000000)
+        {
+        case 1: printf("один миллион "); break;
+        case 2: printf("два миллиона "); break;
+        case 3: printf("три миллиона "); break;
+        case 4: printf("четыре миллиона "); break;
+        case 5: printf("пять миллионов "); break;
+        case 6: printf("шесть миллионов "); break;
+        case 7: printf("семь миллионов "); break;
+        case 8: printf("восемь миллионов "); break;
+        case 9: printf("девять миллионов "); break;
+        }
+    }
+
+    //-------------------------------------------------
+
+    switch((int) a % 1000000 / 100000)
+    {
+    case 1: printf("сто "); break;
+    case 2: printf("двести "); break;
+    case 3: printf("триста "); break;
+    case 4: printf("четыреста "); break;
+    case 5: printf("пятьсот "); break;
+    case 6: printf("шестьсот "); break;
+    case 7: printf("семьсот "); break;
+    case 8: printf("восемьсот "); break;
+    case 9: printf("девятьсот "); break;
+    }
+
+    if ((int)a % 100000 / 10000 != 0 && (int)a % 10000 / 1000 == 0)
+    {
+        switch((int) a % 100000 / 10000)
         {
         case 1: printf("десять тысяч "); break;
         case 2: printf("двадцать тысяч "); break;
         case 3: printf("тридцать тысяч "); break;
         case 4: printf("сорок тысяч "); break;
-        case 5: printf("пятдесят тысяч "); break;
+        case 5: printf("пятьдесят тысяч "); break;
         case 6: printf("шестьдесят тысяч "); break;
         case 7: printf("семьдесят тысяч "); break;
         case 8: printf("восемьдесят тысяч "); break;
@@ -31,30 +104,48 @@ int main()
         }
     }
     else{
-        switch((int) a / 10000)
+        if ((int) a %100000 / 10000 == 1)
         {
-        case 1: printf("десять "); break;
-        case 2: printf("двадцать "); break;
-        case 3: printf("тридцать "); break;
-        case 4: printf("сорок "); break;
-        case 5: printf("пятдесят "); break;
-        case 6: printf("шестьдесят "); break;
-        case 7: printf("семьдесят "); break;
-        case 8: printf("восемьдесят "); break;
-        case 9: printf("девяносто "); break;
+            switch((int) a % 10000 / 1000)
+            {
+            case 10: printf("десять тысяч"); break;
+            case 11: printf("одинадцать тысяч "); break;
+            case 12: printf("двенадцать тысяч "); break;
+            case 13: printf("тринадцать тысяч "); break;
+            case 14: printf("четырнадцать тысяч "); break;
+            case 15: printf("пятнадцать тысяч "); break;
+            case 16: printf("шестнадцать тысяч "); break;
+            case 17: printf("семнадцать тысяч "); break;
+            case 18: printf("восемнадцать тысяч "); break;
+            case 19: printf("девятнадцать тысяч "); break;
+            }
         }
-
-        switch((int) a / 1000)
+        else
         {
-        case 1: printf("тысяча "); break;
-        case 2: printf("две тысячи "); break;
-        case 3: printf("три тысячи "); break;
-        case 4: printf("четыре тысячи "); break;
-        case 5: printf("пять тысяч "); break;
-        case 6: printf("шесть тысяч "); break;
-        case 7: printf("семь тысяч "); break;
-        case 8: printf("восемь тысяч "); break;
-        case 9: printf("девять тысяч "); break;
+            switch((int) a %100000 / 10000)
+            {
+            case 2: printf("двадцать "); break;
+            case 3: printf("тридцать "); break;
+            case 4: printf("сорок "); break;
+            case 5: printf("пятьдесят "); break;
+            case 6: printf("шестьдесят "); break;
+            case 7: printf("семьдесят "); break;
+            case 8: printf("восемьдесят "); break;
+            case 9: printf("девяносто "); break;
+            }
+
+            switch((int) a % 10000 / 1000)
+            {
+            case 1: printf("одна тысяча "); break;
+            case 2: printf("две тысячи "); break;
+            case 3: printf("три тысячи "); break;
+            case 4: printf("четыре тысячи "); break;
+            case 5: printf("пять тысяч "); break;
+            case 6: printf("шесть тысяч "); break;
+            case 7: printf("семь тысяч "); break;
+            case 8: printf("восемь тысяч "); break;
+            case 9: printf("девять тысяч "); break;
+            }
         }
     }
     
@@ -64,7 +155,7 @@ int main()
     case 2: printf("двести "); break;
     case 3: printf("триста "); break;
     case 4: printf("четыреста "); break;
-    case 5: printf("пятсот "); break;
+    case 5: printf("пятьсот "); break;
     case 6: printf("шестьсот "); break;
     case 7: printf("семьсот "); break;
     case 8: printf("восемьсот "); break;
@@ -76,7 +167,7 @@ int main()
     case 2: printf("двадцать "); break;
     case 3: printf("тридцать "); break;
     case 4: printf("сорок "); break;
-    case 5: printf("пятдесят "); break;
+    case 5: printf("пятьдесят "); break;
     case 6: printf("шестьдесят "); break;
     case 7: printf("семьдесят "); break;
     case 8: printf("восемьдесят "); break;

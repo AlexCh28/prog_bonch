@@ -227,22 +227,22 @@ int main()
         }
     }
 
-    if ((a > 0 && (int)a%10==0) && !((int)a % 100 >= 10 & (int)a % 100 < 20))
+    if ( a>=1 && (a > 0 && (int)a%10==0) && !((int)a % 100 >= 10 & (int)a % 100 < 20))
     {
         printf("рублей ");
     }
-    else if (a == 0)
+    else if (a<1)
     {
         printf("ноль рублей ");
     }
 
-    int cents = ((int)(a * 100) % 100); 
+    long unsigned int cents = ((long unsigned int)(a * 100) % 100); 
     
     if (cents != 0)
     {
-        if (cents % 10 != 0)
+        if (cents % 10 != 0 || cents == 10)
         {
-            switch ((cents % HUNDRED) / TEN)
+            switch (cents / TEN)
             {
             case 2: printf("двадцать "); break;
             case 3: printf("тридцать "); break;
@@ -254,8 +254,8 @@ int main()
             case 9: printf("девяносто "); break;
             }
 
-            if (cents % HUNDRED >= 10 & cents % HUNDRED < 20) {
-                switch (cents % HUNDRED) 
+            if (cents >= 10 & cents < 20) {
+                switch (cents) 
                 {
                 case 10: printf("десять копеек\n"); break;
                 case 11: printf("одинадцать копеек\n"); break;

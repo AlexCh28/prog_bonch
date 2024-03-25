@@ -7,11 +7,11 @@ float y(float x)
 
 int main()
 {
-    printf("------------------\n");
-    printf("! x !   y=f(x)   !\n");
-    printf("------------------\n");
+    printf("--------------------\n");
+    printf("! x !     y=f(x)   !\n");
+    printf("--------------------\n");
     for (int x = 7; x < 12; x++)
     {
-        printf("%3d\t%5.2f\n", x, y(x));
+        printf("%3d \t %5.2f\n", x, y(x));
     }
 }

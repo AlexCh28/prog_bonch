@@ -31,15 +31,15 @@ int main()
         return 0;
     }
 
-    printf("------------------------\n");
-    printf("!  x  !     y=f(x)     !\n");
-    printf("------------------------\n");
+    printf("----------------------------------\n");
+    printf("!    x    !        y=f(x)        !\n");
+    printf("----------------------------------\n");
 
     double x = start;
 
     while (x <= end)
     {
-        printf(" %08f   %08f \n", x, y(x));
+        printf("%10.1f \t %10.2f\n", x, y(x));
         x += step;
     }
 }

@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-float y(float x)
+double y(double x)
 {
-    float value = 1;
-    float step = 0.5;
-    float a = 0;
+    double value = 1;
+    double step = 0.5;
+    double a = 0;
     while (a <= 5)
     {
         value *= x-a;
@@ -19,11 +19,11 @@ int main()
     printf("! x !   y=f(x)   !\n");
     printf("------------------\n");
 
-    float x = 0;
-    float step = 0.1;
-    while (x < 1)
+    double x = 0;
+    double step = 0.1;
+    while (x <= 0.9)
     {
-        printf(" %1.1f\t%5.2f\n", x, y(x));
+        printf("%4.1f \t %5.2f\n", x, y(x));
         x += step;
     }
 }
